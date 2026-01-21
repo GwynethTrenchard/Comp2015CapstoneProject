@@ -1,2 +1,3 @@
 # Comp2015CapstoneProject
-# Gwyneth Trenchard (Team Lead) 
+## Team members
+1. Gwyneth Trenchard (Team Lead) 
