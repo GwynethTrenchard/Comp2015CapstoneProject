@@ -1,12 +1,14 @@
 using Avalonia.Controls;
 
-namespace Frontend.ui
+namespace Frontend.ui;
+using Frontend.ui.PageView;
+
+
+public partial class MainWindow : Window
 {
-    public partial class MainWindow : Window
+    public MainWindow()
     {
-        public MainWindow()
-        {
-            InitializeComponent();
-        }
+        InitializeComponent();
+        ContentArea.Content = new LandingPageView();
     }
 }

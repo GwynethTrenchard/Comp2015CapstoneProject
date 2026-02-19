@@ -1,0 +1,49 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="Frontend.ui.PageView.LandingPageView">
+  
+    
+    <Grid RowDefinitions="Auto,Auto,Auto"
+          Margin="40">
+
+        <!-- Title -->
+        <TextBlock Text="Welcome to Chronicle"
+                   FontSize="28"
+                   FontWeight="Bold"
+                   HorizontalAlignment="Center"
+                   Margin="0 0 0 20"/>
+
+        <!-- Description -->
+        <TextBlock Grid.Row="1"
+                   Text="“Chronicle is a tool for Dungeon Masters and Players to organize and explore their campaigns. It keeps shared notes, character details, and world information in one place, while also offering private spaces for secrets, plot hooks, and personal storylines. Whether you're running a long‑term adventure or starting a new quest, Chronicle helps your table stay connected, organized, and immersed.”"
+                   TextWrapping="Wrap"
+                   FontSize="16"
+                   HorizontalAlignment="Center"
+                   TextAlignment="Center"
+                   Margin="0 0 0 30"/>
+
+        <!-- Buttons -->
+        <StackPanel Grid.Row="2"
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Center"
+                    Spacing="20">
+
+            <Button x:Name="LoginButton"
+                    Content="Login"
+                    Width="120"
+                    Height="40"/>
+
+            <Button x:Name="RegisterButton"
+                    Content="Register"
+                    Width="120"
+                    Height="40"/>
+
+        </StackPanel>
+
+    </Grid>
+
+
+</UserControl>

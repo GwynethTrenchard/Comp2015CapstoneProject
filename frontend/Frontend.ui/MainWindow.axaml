@@ -2,8 +2,26 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:views="clr-namespace:Frontend.ui"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="Frontend.ui.MainWindow"
         Title="Frontend.ui">
-    Welcome to Avalonia!
+
+    
+    <Grid RowDefinitions="Auto,*,Auto">
+
+        <!-- Header at the top -->
+        <views:HeaderView Grid.Row="0"/>
+
+        <!-- Main content fills the middle -->
+        <ContentControl x:Name="ContentArea" Grid.Row="1"/>
+
+
+        <!-- Footer at the bottom -->
+        <views:FooterView Grid.Row="2"/>
+
+    </Grid>
+
+
+
 </Window>
