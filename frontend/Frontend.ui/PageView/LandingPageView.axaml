@@ -33,11 +33,13 @@
 
             <Button x:Name="LoginButton"
                     Content="Login"
+                    Click="OnLoginClicked"
                     Width="120"
                     Height="40"/>
 
             <Button x:Name="RegisterButton"
                     Content="Register"
+                    Click="OnRegisterClicked"
                     Width="120"
                     Height="40"/>
 

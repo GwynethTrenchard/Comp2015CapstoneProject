@@ -11,4 +11,12 @@ public partial class MainWindow : Window
         InitializeComponent();
         ContentArea.Content = new LandingPageView();
     }
+    public void NavigateToLogin()
+    {
+        ContentArea.Content = new LoginPageView();
+    }
+    public void NavigateToRegister()
+    {
+        ContentArea.Content = new RegisterPageView();
+    }
 }
