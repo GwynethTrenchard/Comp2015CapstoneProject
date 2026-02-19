@@ -18,4 +18,10 @@
       <PrivateAssets Condition="'$(Configuration)' != 'Debug'">All</PrivateAssets>
     </PackageReference>
   </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="GlobalUI\HeaderView.axaml.cs">
+      <DependentUpon>HeaderView.axaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
 </Project>
