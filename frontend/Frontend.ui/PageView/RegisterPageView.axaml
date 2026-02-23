@@ -4,11 +4,81 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="Frontend.ui.PageView.RegisterPageView">
-      <Grid>
-        <TextBlock Text="Register Page"
-                   FontSize="24"
-                   HorizontalAlignment="Center"
-                   VerticalAlignment="Center"/>
+           
+    
+    
+    <Grid>
+
+        <!-- Top-right Back Button -->
+        <Button Content="Back"
+                x:Name="BackButton"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Top"
+                Margin="0 10 10 0"
+                Width="100"
+                Height="32"/>
+
+        <!-- Centered Form -->
+        <Grid HorizontalAlignment="Center"
+              VerticalAlignment="Center">
+
+            <StackPanel Width="350" Spacing="12">
+
+                <TextBlock Text="Register"
+                           FontSize="28"
+                           FontWeight="Bold"
+                           HorizontalAlignment="Center"
+                           Margin="0 0 0 10"/>
+
+                <!-- Username -->
+                <TextBlock Text="Username" FontSize="16"/>
+                <TextBox x:Name="UsernameBox"
+                         Width="300"
+                         Height="32"
+                         Watermark="Enter your Username"/>
+
+                <!-- Email -->
+                <TextBlock Text="Email" FontSize="16"/>
+                <TextBox x:Name="EmailBox"
+                         Width="300"
+                         Height="32"
+                         Watermark="Enter your Email"/>
+
+                <!-- Password -->
+                <TextBlock Text="Password" FontSize="16"/>
+                <TextBox x:Name="PasswordBox"
+                         Width="300"
+                         Height="32"
+                         Watermark="Enter your Password"
+                         PasswordChar="*"/>
+
+                <!-- Confirm Password -->
+                <TextBlock Text="Confirm Password" FontSize="16"/>
+                <TextBox x:Name="ConfirmPasswordBox"
+                         Width="300"
+                         Height="32"
+                         Watermark="Re-enter your Password"
+                         PasswordChar="*"/>
+
+                <!-- Register Button -->
+                <Button Content="Register"
+                        x:Name="RegisterButton"
+                        Width="150"
+                        Height="40"
+                        HorizontalAlignment="Center"
+                        Margin="0 20 0 0"/>
+
+                <!-- Login Button (now below Register) -->
+                <Button Content="Login"
+                        x:Name="LoginButton"
+                        Width="150"
+                        Height="40"
+                        HorizontalAlignment="Center"/>
+
+            </StackPanel>
+
+        </Grid>
+
     </Grid>
 
 </UserControl>
