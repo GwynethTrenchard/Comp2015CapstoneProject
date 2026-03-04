@@ -1,0 +1,170 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="Frontend.ui.MainPageView">
+      
+    
+    <Grid RowDefinitions="Auto,Auto,Auto,*"
+          ColumnDefinitions="*,*"
+          Margin="20">
+
+        <!-- Logout button -->
+        <Button Content="Logout"
+                Grid.Row="0"
+                Grid.ColumnSpan="2"
+                HorizontalAlignment="Right"
+                Width="100"
+                Height="35"
+                Margin="0,0,10,0"/>
+
+        <!-- Create / Join Buttons -->
+        <StackPanel Grid.Row="1"
+                    Grid.ColumnSpan="2"
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Center"
+                    Spacing="60"
+                    Margin="0,20,0,20">
+
+            <Button Content="Create Campaign"
+                    Width="220"
+                    Height="60"
+                    FontSize="24"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Center"/>
+
+            <Button Content="Join Campaign"
+                    Width="220"
+                    Height="60"
+                    FontSize="24"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Center"/>
+        </StackPanel>
+
+        <!-- Horizontal divider -->
+        <Border Grid.Row="2"
+                Grid.ColumnSpan="2"
+                BorderBrush="Gray"
+                BorderThickness="0,2,0,0"/>
+
+        <!-- Vertical divider -->
+        <Border Grid.Row="3"
+                Grid.Column="0"
+                BorderBrush="Gray"
+                BorderThickness="0,0,2,0"/>
+
+        <!-- Created Games -->
+        <Border Grid.Row="3"
+                Grid.Column="0"
+                BorderThickness="0"
+                CornerRadius="8"
+                Padding="15"
+                Margin="10"
+                MaxHeight="300">
+
+            <Grid ColumnDefinitions="Auto,*,Auto">
+
+                <!-- Left Arrow -->
+                <Button Content="⟨"
+                        Width="45"
+                        Height="45"
+                        FontSize="26"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"/>
+
+                <!-- Image + Title -->
+                <StackPanel Grid.Column="1"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            Spacing="14">
+
+                    <TextBlock Text="Created Games"
+                               FontSize="20"
+                               HorizontalAlignment="Center"
+                               Margin="0,0,0,10"/>
+
+                    <Border Width="140"
+                            Height="140"
+                            Background="#DDD"
+                            CornerRadius="10"
+                            HorizontalAlignment="Center"/>
+
+                    <TextBlock Text="Campaign Title"
+                               FontSize="18"
+                               HorizontalAlignment="Center"/>
+                </StackPanel>
+
+                <!-- Right Arrow -->
+                <Button Grid.Column="2"
+                        Content="⟩"
+                        Width="45"
+                        Height="45"
+                        FontSize="26"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"/>
+            </Grid>
+        </Border>
+
+        <!-- Joined Games -->
+        <Border Grid.Row="3"
+                Grid.Column="1"
+                BorderThickness="0"
+                CornerRadius="8"
+                Padding="15"
+                Margin="10"
+                MaxHeight="300">
+
+            <Grid ColumnDefinitions="Auto,*,Auto">
+
+                <!-- Left Arrow -->
+                <Button Content="⟨"
+                        Width="45"
+                        Height="45"
+                        FontSize="26"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"/>
+
+                <!-- Image + Title -->
+                <StackPanel Grid.Column="1"
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            Spacing="14">
+
+                    <TextBlock Text="Joined Games"
+                               FontSize="20"
+                               HorizontalAlignment="Center"
+                               Margin="0,0,0,10"/>
+
+                    <Border Width="140"
+                            Height="140"
+                            Background="#DDD"
+                            CornerRadius="10"
+                            HorizontalAlignment="Center"/>
+
+                    <TextBlock Text="Campaign Title"
+                               FontSize="18"
+                               HorizontalAlignment="Center"/>
+                </StackPanel>
+
+                <!-- Right Arrow -->
+                <Button Grid.Column="2"
+                        Content="⟩"
+                        Width="45"
+                        Height="45"
+                        FontSize="26"
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"/>
+            </Grid>
+        </Border>
+
+    </Grid>
+
+
+
+
+
+
+
+
+</UserControl>
