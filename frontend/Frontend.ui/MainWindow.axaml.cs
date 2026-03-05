@@ -19,4 +19,12 @@ public partial class MainWindow : Window
     {
         ContentArea.Content = new RegisterPageView();
     }
+    public void NavigateToLanding()
+    {
+        ContentArea.Content = new LandingPageView();
+    }
+    public void NavigateToMain()
+    {
+        ContentArea.Content = new MainPageView();
+    }
 }

@@ -12,6 +12,7 @@
         <!-- Top-right Back Button -->
         <Button Content="Back"
                 x:Name="BackButton"
+                Click="OnBackClicked"
                 HorizontalAlignment="Right"
                 VerticalAlignment="Top"
                 Margin="0 10 10 0"
@@ -63,6 +64,7 @@
                 <!-- Register Button -->
                 <Button Content="Register"
                         x:Name="RegisterButton"
+                        Click="OnRegisterClicked"
                         Width="150"
                         Height="40"
                         HorizontalAlignment="Center"
@@ -70,6 +72,7 @@
 
                 <!-- Login Button (now below Register) -->
                 <Button Content="Login"
+                        Click="OnLoginClicked"
                         x:Name="LoginButton"
                         Width="150"
                         Height="40"

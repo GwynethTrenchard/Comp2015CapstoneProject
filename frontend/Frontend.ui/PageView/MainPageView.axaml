@@ -12,6 +12,7 @@
 
         <!-- Logout button -->
         <Button Content="Logout"
+                Click="OnLogoutClicked"
                 Grid.Row="0"
                 Grid.ColumnSpan="2"
                 HorizontalAlignment="Right"
