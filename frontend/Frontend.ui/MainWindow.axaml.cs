@@ -9,7 +9,7 @@ public partial class MainWindow : Window
     public MainWindow()
     {
         InitializeComponent();
-        ContentArea.Content = new LandingPageView();
+        ContentArea.Content = new CreateCampaignView();
     }
     public void NavigateToLogin()
     {

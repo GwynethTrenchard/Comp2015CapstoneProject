@@ -1,0 +1,65 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="Frontend.ui.CreateCampaignView">
+        <Grid Margin="20" RowDefinitions="Auto,*">
+
+        <!-- Top Bar with Back Button -->
+        <Grid>
+            <Button Content="Back"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Top"
+                    Width="80"/>
+        </Grid>
+
+        <!-- Main Content -->
+        <StackPanel Grid.Row="1"
+                    Spacing="20"
+                    Width="400"
+                    HorizontalAlignment="Center"
+                    Margin="0,20,0,0">
+
+            <!-- Campaign Name -->
+            <StackPanel Spacing="6">
+                <TextBlock Text="Campaign Name" FontWeight="Bold"/>
+                <TextBox Watermark="Enter campaign name..."/>
+            </StackPanel>
+
+            <!-- Image Upload -->
+            <StackPanel Spacing="6">
+                <TextBlock Text="Campaign Image" FontWeight="Bold"/>
+                <Border BorderBrush="Gray"
+                        BorderThickness="1"
+                        Height="150"
+                        Background="#EEE">
+                    <TextBlock Text="Image Preview"
+                               HorizontalAlignment="Center"
+                               VerticalAlignment="Center"
+                               Foreground="Gray"/>
+                </Border>
+                <Button Content="Choose Image"
+                        Width="150"
+                        HorizontalAlignment="Center"/>
+            </StackPanel>
+
+            <!-- Description -->
+            <StackPanel Spacing="6">
+                <TextBlock Text="Description" FontWeight="Bold"/>
+                <TextBox AcceptsReturn="True"
+                         Height="120"
+                         Watermark="Enter campaign description..."/>
+            </StackPanel>
+
+            <!-- Create Button (now directly under description) -->
+            <Button Content="Create Campaign"
+                    Width="200"
+                    HorizontalAlignment="Center"
+                    Margin="0,10,0,0"/>
+        </StackPanel>
+
+    </Grid>
+
+
+</UserControl>
