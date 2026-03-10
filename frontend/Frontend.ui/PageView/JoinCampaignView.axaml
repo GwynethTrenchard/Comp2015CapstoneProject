@@ -4,5 +4,49 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="Frontend.ui.JoinCampaignView">
-  Welcome to Avalonia!
+
+ <Grid>
+
+        <!-- Back Button (top-right) -->
+        <Button Content="Back"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Top"
+                Margin="0,10,10,0"
+                Width="80"
+                Height="30"/>
+
+        <!-- Main Content -->
+        <StackPanel Margin="20"
+                    Spacing="15"
+                    VerticalAlignment="Center"
+                    HorizontalAlignment="Center">
+
+            <TextBlock Text="Join a Game"
+                       FontSize="22"
+                       HorizontalAlignment="Center"/>
+
+            <TextBlock Text="Game Link"/>
+            <TextBox Name="LinkTextBox"
+                     Width="250"
+                     Watermark="Enter link"/>
+
+            <TextBlock Text="Invite Code"/>
+            <TextBox Name="InviteCodeTextBox"
+                     Width="250"
+                     Watermark="Enter invite code"/>
+
+            <TextBlock Text="(You only need one of these to join)"
+                       FontSize="12"
+                       Foreground="Gray"
+                       HorizontalAlignment="Center"/>
+
+            <!-- Regular Join Button -->
+            <Button Content="Join"
+                    Width="120"
+                    Height="40"
+                    HorizontalAlignment="Center"/>
+        </StackPanel>
+
+    </Grid>
+
 </UserControl>

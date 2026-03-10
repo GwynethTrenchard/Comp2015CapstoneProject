@@ -27,6 +27,14 @@
                 <TextBox Watermark="Enter campaign name..."/>
             </StackPanel>
 
+            <!-- Description -->
+            <StackPanel Spacing="6">
+                <TextBlock Text="Description" FontWeight="Bold"/>
+                <TextBox AcceptsReturn="True"
+                         Height="120"
+                         Watermark="Enter campaign description..."/>
+            </StackPanel>
+
             <!-- Image Upload -->
             <StackPanel Spacing="6">
                 <TextBlock Text="Campaign Image" FontWeight="Bold"/>
@@ -42,14 +50,6 @@
                 <Button Content="Choose Image"
                         Width="150"
                         HorizontalAlignment="Center"/>
-            </StackPanel>
-
-            <!-- Description -->
-            <StackPanel Spacing="6">
-                <TextBlock Text="Description" FontWeight="Bold"/>
-                <TextBox AcceptsReturn="True"
-                         Height="120"
-                         Watermark="Enter campaign description..."/>
             </StackPanel>
 
             <!-- Create Button (now directly under description) -->
