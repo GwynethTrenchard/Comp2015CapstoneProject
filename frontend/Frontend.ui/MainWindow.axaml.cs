@@ -27,4 +27,12 @@ public partial class MainWindow : Window
     {
         ContentArea.Content = new MainPageView();
     }
+    public void NavigateToCreate()
+    {
+        ContentArea.Content = new CreateCampaignView();
+    }
+    public void NavigateToJoin()
+    {
+        ContentArea.Content = new JoinCampaignView();
+    }
 }
