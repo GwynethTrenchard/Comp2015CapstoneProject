@@ -13,14 +13,14 @@ public partial class LoginPageView : UserControl
     }
     private void OnBackClicked(object? sender, RoutedEventArgs e)
     {
-        (TopLevel.GetTopLevel(this) as MainWindow)?.NavigateToLanding();
+        (TopLevel.GetTopLevel(this) as MainWindow)?.Navigate(new LandingPageView());
     }
     private void OnLoginClicked(object? sender, RoutedEventArgs e)
     {
-        (TopLevel.GetTopLevel(this) as MainWindow)?.NavigateToMain();
+        (TopLevel.GetTopLevel(this) as MainWindow)?.Navigate(new MainPageView());
     }
     private void OnRegisterClicked(object? sender, RoutedEventArgs e)
     {
-        (TopLevel.GetTopLevel(this) as MainWindow)?.NavigateToRegister();
+        (TopLevel.GetTopLevel(this) as MainWindow)?.Navigate(new RegisterPageView());
     }
 }

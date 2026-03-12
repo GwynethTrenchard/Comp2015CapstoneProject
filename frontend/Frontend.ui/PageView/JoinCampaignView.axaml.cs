@@ -13,6 +13,6 @@ public partial class JoinCampaignView : UserControl
     }
     private void OnBackClicked(object? sender, RoutedEventArgs e)
     {
-        (TopLevel.GetTopLevel(this) as MainWindow)?.NavigateToMain();
+        (TopLevel.GetTopLevel(this) as MainWindow)?.Navigate(new MainPageView());
     }
 }
