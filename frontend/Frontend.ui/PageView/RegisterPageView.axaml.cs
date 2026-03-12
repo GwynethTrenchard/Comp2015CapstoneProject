@@ -3,6 +3,7 @@ using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Interactivity;
 using Avalonia.Markup.Xaml;
+using Tmds.DBus.Protocol;
 
 namespace Frontend.ui.PageView;
 
@@ -14,7 +15,7 @@ public partial class RegisterPageView : UserControl
     }
     private void OnLoginClicked(object? sender, RoutedEventArgs e)
     {
-        (TopLevel.GetTopLevel(this) as MainWindow)?.NavigateToLogin();
+        (TopLevel.GetTopLevel(this) as MainWindow)?.Navigate(new LoginPageView());
     }
     private void OnRegisterClicked(object? sender, RoutedEventArgs e)
     {
@@ -26,10 +27,10 @@ public partial class RegisterPageView : UserControl
         //    return;
         //}
 
-        (TopLevel.GetTopLevel(this) as MainWindow)?.NavigateToLogin();
+        (TopLevel.GetTopLevel(this) as MainWindow)?.Navigate(new LoginPageView());
     }
     private void OnBackClicked(object? sender, RoutedEventArgs e)
     {
-        (TopLevel.GetTopLevel(this) as MainWindow)?.NavigateToLanding();
+        (TopLevel.GetTopLevel(this) as MainWindow)?.Navigate(new LandingPageView());
     }
 }

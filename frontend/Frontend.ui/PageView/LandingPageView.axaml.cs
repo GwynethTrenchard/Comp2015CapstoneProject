@@ -13,11 +13,11 @@ public partial class LandingPageView : UserControl
     }
     private void OnLoginClicked(object? sender, RoutedEventArgs e)
     {
-        (TopLevel.GetTopLevel(this) as MainWindow)?.NavigateToLogin();
+        (TopLevel.GetTopLevel(this) as MainWindow)?.Navigate(new LoginPageView());
     }
 
     private void OnRegisterClicked(object? sender, RoutedEventArgs e)
     {
-        (TopLevel.GetTopLevel(this) as MainWindow)?.NavigateToRegister();
+        (TopLevel.GetTopLevel(this) as MainWindow)?.Navigate(new RegisterPageView());
     }
 }

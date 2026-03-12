@@ -11,28 +11,33 @@ public partial class MainWindow : Window
         InitializeComponent();
         ContentArea.Content = new LandingPageView();
     }
-    public void NavigateToLogin()
+
+    public void Navigate (UserControl newPage)
     {
-        ContentArea.Content = new LoginPageView();
+        ContentArea.Content = newPage;
     }
-    public void NavigateToRegister()
-    {
-        ContentArea.Content = new RegisterPageView();
-    }
-    public void NavigateToLanding()
-    {
-        ContentArea.Content = new LandingPageView();
-    }
-    public void NavigateToMain()
-    {
-        ContentArea.Content = new MainPageView();
-    }
-    public void NavigateToCreate()
-    {
-        ContentArea.Content = new CreateCampaignView();
-    }
-    public void NavigateToJoin()
-    {
-        ContentArea.Content = new JoinCampaignView();
-    }
+    //public void NavigateToLogin()
+    //{
+    //    ContentArea.Content = new LoginPageView();
+    //}
+    //public void NavigateToRegister()
+    //{
+    //    ContentArea.Content = new RegisterPageView();
+    //}
+    //public void NavigateToLanding()
+    //{
+    //    ContentArea.Content = new LandingPageView();
+    //}
+    //public void NavigateToMain()
+    //{
+    //    ContentArea.Content = new MainPageView();
+    //}
+    ////public void NavigateToCreate()
+    ////{
+    ////    ContentArea.Content = new CreateCampaignView();
+    ////}
+    //public void NavigateToJoin()
+    //{
+    //    ContentArea.Content = new JoinCampaignView();
+    //}
 }
