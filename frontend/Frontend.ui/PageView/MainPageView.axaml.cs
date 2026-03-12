@@ -15,4 +15,12 @@ public partial class MainPageView : UserControl
     {
         (TopLevel.GetTopLevel(this) as MainWindow)?.NavigateToLanding();
     }
+    private void OnCreateClicked(object? sender, RoutedEventArgs e)
+    {
+        (TopLevel.GetTopLevel(this) as MainWindow)?.NavigateToCreate();
+    }
+    private void OnJoinClicked(object? sender, RoutedEventArgs e)
+    {
+        (TopLevel.GetTopLevel(this) as MainWindow)?.NavigateToJoin();
+    }
 }

@@ -9,6 +9,7 @@
         <!-- Top Bar with Back Button -->
         <Grid>
             <Button Content="Back"
+                    Click="OnBackClicked"
                     HorizontalAlignment="Right"
                     VerticalAlignment="Top"
                     Width="80"/>

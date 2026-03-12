@@ -29,6 +29,7 @@
                     Margin="0,20,0,20">
 
             <Button Content="Create Campaign"
+                    Click="OnCreateClicked"
                     Width="220"
                     Height="60"
                     FontSize="24"
@@ -36,6 +37,7 @@
                     VerticalContentAlignment="Center"/>
 
             <Button Content="Join Campaign"
+                    Click="OnJoinClicked"
                     Width="220"
                     Height="60"
                     FontSize="24"
