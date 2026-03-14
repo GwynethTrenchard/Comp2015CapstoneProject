@@ -1,0 +1,157 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="Frontend.ui.CampaignView">
+  <Grid ColumnDefinitions="1*,2*,1*"
+          RowDefinitions="Auto,*">
+
+        <!-- ========================= -->
+        <!--       LEFT SIDEBAR       -->
+        <!-- ========================= -->
+        <Border Grid.Column="0"
+                Margin="10"
+                Padding="0"
+                Background="{DynamicResource ThemeControlLowBrush}"
+                BorderBrush="{DynamicResource ThemeBorderMidBrush}"
+                BorderThickness="2"
+                CornerRadius="6">
+
+            <StackPanel Spacing="10"
+                        Margin="10"
+                        HorizontalAlignment="Stretch">
+
+                <Expander Header="Timeline"
+                          IsExpanded="True"
+                          HorizontalAlignment="Stretch">
+
+                    <StackPanel Spacing="5"
+                                HorizontalAlignment="Stretch">
+
+                        <Button Content="Quest 1"
+                                HorizontalContentAlignment="Center"
+                                VerticalContentAlignment="Center"
+                                Height="40"
+                                HorizontalAlignment="Stretch"/>
+
+                        <Button Content="+ New Quest"
+                                HorizontalContentAlignment="Center"
+                                VerticalContentAlignment="Center"
+                                Height="40"
+                                HorizontalAlignment="Stretch"/>
+                    </StackPanel>
+
+                </Expander>
+
+            </StackPanel>
+
+        </Border>
+
+
+        <!-- ========================= -->
+        <!--       CENTER PANEL        -->
+        <!-- ========================= -->
+        <StackPanel Grid.Column="1"
+                    Margin="20"
+                    Spacing="20"
+                    HorizontalAlignment="Center">
+
+            <!-- Added extra spacing below title -->
+            <TextBlock Text="Campaign Name"
+                       FontSize="26"
+                       Margin="0 0 0 10"
+                       HorizontalAlignment="Center"
+                       Foreground="{DynamicResource ThemeForegroundBrush}"/>
+
+            <Border Background="{DynamicResource ThemeControlLowBrush}"
+                    BorderBrush="{DynamicResource ThemeBorderMidBrush}"
+                    BorderThickness="2"
+                    Padding="10"
+                    CornerRadius="6"
+                    MinWidth="300"
+                    MaxWidth="450"
+                    MinHeight="250"
+                    HorizontalAlignment="Center">
+
+                <TextBlock Text="Campaign description goes here..."
+                           TextWrapping="Wrap"
+                           Foreground="{DynamicResource ThemeForegroundBrush}"/>
+            </Border>
+
+            <StackPanel Orientation="Horizontal"
+                        HorizontalAlignment="Center"
+                        Spacing="15">
+
+                <Button Content="Archive"
+                        Width="90"
+                        Height="30"/>
+
+                <Button Content="Clone"
+                        Width="90"
+                        Height="30"/>
+
+            </StackPanel>
+
+            <Button Content="Return"
+                    Width="130"
+                    Height="35"
+                    HorizontalAlignment="Center"/>
+
+            <Button Content="Delete"
+                    Width="130"
+                    Height="35"
+                    Background="#CC4444"
+                    Foreground="White"
+                    HorizontalAlignment="Center"/>
+
+        </StackPanel>
+
+
+        <!-- ========================= -->
+        <!--      RIGHT SIDEBAR        -->
+        <!-- ========================= -->
+        <Border Grid.Column="2"
+                Margin="10"
+                Padding="0"
+                Background="{DynamicResource ThemeControlLowBrush}"
+                BorderBrush="{DynamicResource ThemeBorderMidBrush}"
+                BorderThickness="2"
+                CornerRadius="6">
+
+            <StackPanel Spacing="10"
+                        Margin="10"
+                        HorizontalAlignment="Stretch">
+
+                <TextBlock Text="Characters"
+                           FontSize="20"
+                           HorizontalAlignment="Center"
+                           Foreground="{DynamicResource ThemeForegroundBrush}"/>
+
+                <ScrollViewer Height="300">
+                    <StackPanel Spacing="10"
+                                HorizontalAlignment="Stretch">
+
+                        <!-- Character buttons centered horizontally + vertically -->
+                        <Button Content="Character 1"
+                                FontSize="18"
+                                Height="55"
+                                HorizontalContentAlignment="Center"
+                                VerticalContentAlignment="Center"
+                                HorizontalAlignment="Stretch"/>
+
+                        <Button Content="Create New Character"
+                                FontSize="18"
+                                Height="55"
+                                HorizontalContentAlignment="Center"
+                                VerticalContentAlignment="Center"
+                                HorizontalAlignment="Stretch"/>
+                    </StackPanel>
+                </ScrollViewer>
+
+            </StackPanel>
+
+        </Border>
+
+    </Grid>
+</UserControl>
