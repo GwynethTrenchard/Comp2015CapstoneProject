@@ -1,0 +1,126 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="1980" d:DesignHeight="1080"
+             x:Class="Frontend.ui.SpellView">
+  <ScrollViewer>
+        <Grid RowDefinitions="Auto, *" RowSpacing="20" Margin="20">
+
+            <!-- ===========================
+                 TOP BAR (FIXED)
+                 =========================== -->
+            <Grid ColumnDefinitions="Auto, *, Auto">
+
+                <!-- New Spell Button (top-left) -->
+                <Button Content="New Spell"
+                        Width="120"
+                        Height="40"
+                        HorizontalAlignment="Left"/>
+
+                <!-- Title (centered text only) -->
+                <TextBlock Grid.Column="1"
+                           Text="Spells"
+                           FontSize="26"
+                           FontWeight="Bold"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center"/>
+
+                <!-- Return Button (top-right) -->
+                <Button Grid.Column="2"
+                        Content="Return"
+                        Width="120"
+                        Height="40"
+                        HorizontalAlignment="Right"/>
+            </Grid>
+
+
+            <!-- ===========================
+                 SPELL LIST
+                 =========================== -->
+            <StackPanel Grid.Row="1" Spacing="15">
+
+                <!-- ===========================
+                     EXAMPLE SPELL CARD
+                     =========================== -->
+                <Expander Header="Fire Bolt (Cantrip)"
+                          IsExpanded="False">
+
+                    <Border BorderBrush="#888"
+                            BorderThickness="1"
+                            CornerRadius="6"
+                            Padding="10"
+                            Margin="0,5,0,0">
+
+                        <StackPanel Spacing="10">
+
+                            <!-- Spell Name -->
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="Spell Name:" Width="120"/>
+                                <TextBox Width="200" Text="Fire Bolt"/>
+                            </StackPanel>
+
+                            <!-- Spell Level Dropdown -->
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="Spell Level:" Width="120"/>
+                                <ComboBox Width="200">
+                                    <ComboBoxItem Content="Cantrip"/>
+                                    <ComboBoxItem Content="1st Level"/>
+                                    <ComboBoxItem Content="2nd Level"/>
+                                    <ComboBoxItem Content="3rd Level"/>
+                                    <ComboBoxItem Content="4th Level"/>
+                                    <ComboBoxItem Content="5th Level"/>
+                                    <ComboBoxItem Content="6th Level"/>
+                                    <ComboBoxItem Content="7th Level"/>
+                                    <ComboBoxItem Content="8th Level"/>
+                                    <ComboBoxItem Content="9th Level"/>
+                                </ComboBox>
+                            </StackPanel>
+
+                            <!-- Components -->
+                            <StackPanel Orientation="Horizontal" Spacing="20">
+
+                                <StackPanel Orientation="Horizontal">
+                                    <CheckBox/>
+                                    <TextBlock Text="V"/>
+                                </StackPanel>
+
+                                <StackPanel Orientation="Horizontal">
+                                    <CheckBox/>
+                                    <TextBlock Text="S"/>
+                                </StackPanel>
+
+                                <StackPanel Orientation="Horizontal">
+                                    <CheckBox/>
+                                    <TextBlock Text="M"/>
+                                </StackPanel>
+
+                            </StackPanel>
+
+                            <!-- Material Component -->
+                            <StackPanel>
+                                <TextBlock Text="Material Component:"/>
+                                <TextBox Watermark="Enter material component"/>
+                            </StackPanel>
+
+                            <!-- Description -->
+                            <StackPanel>
+                                <TextBlock Text="Description:"/>
+                                <TextBox AcceptsReturn="True"
+                                         Height="120"
+                                         Watermark="Enter spell description here"/>
+                            </StackPanel>
+
+                        </StackPanel>
+
+                    </Border>
+
+                </Expander>
+
+            </StackPanel>
+
+        </Grid>
+    </ScrollViewer>
+
+
+</UserControl>
