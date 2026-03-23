@@ -1,0 +1,100 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="Frontend.ui.FeatureView">
+  <ScrollViewer>
+        <Grid RowDefinitions="Auto, *" RowSpacing="20" Margin="20">
+
+            <!-- ===========================
+                 TOP BAR
+                 =========================== -->
+            <Grid ColumnDefinitions="Auto, *, Auto">
+
+                <!-- New Feature Button (top-left) -->
+                <Button Content="New Feature"
+                        Width="140"
+                        Height="40"
+                        HorizontalAlignment="Left"/>
+
+                <!-- Title (center) -->
+                <TextBlock Grid.Column="1"
+                           Text="Features"
+                           FontSize="26"
+                           FontWeight="Bold"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center"/>
+
+                <!-- Return Button (top-right) -->
+                <Button Grid.Column="2"
+                        Content="Return"
+                        Width="120"
+                        Height="40"
+                        HorizontalAlignment="Right"/>
+            </Grid>
+
+
+            <!-- ===========================
+                 FEATURE LIST
+                 =========================== -->
+            <StackPanel Grid.Row="1" Spacing="15">
+
+                <!-- ===========================
+                     EXAMPLE FEATURE CARD
+                     =========================== -->
+                <Expander Header="Darkvision — Racial"
+                          IsExpanded="False">
+
+                    <Border BorderBrush="#888"
+                            BorderThickness="1"
+                            CornerRadius="6"
+                            Padding="10"
+                            Margin="0,5,0,0">
+
+                        <StackPanel Spacing="10">
+
+                            <!-- Feature Name -->
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="Feature Name:" Width="120"/>
+                                <TextBox Width="250" Text="Darkvision"/>
+                            </StackPanel>
+
+                            <!-- Source Dropdown -->
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="Source:" Width="120"/>
+                                <ComboBox Width="200">
+                                    <ComboBoxItem Content="Racial"/>
+                                    <ComboBoxItem Content="Class"/>
+                                    <ComboBoxItem Content="Background"/>
+                                    <ComboBoxItem Content="Item"/>
+                                    <ComboBoxItem Content="Other"/>
+                                </ComboBox>
+                            </StackPanel>
+
+                            <!-- Source Type -->
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="Source Type:" Width="120"/>
+                                <TextBox Width="250" Watermark="e.g., Elf, Fighter, Noble, Magic Item"/>
+                            </StackPanel>
+
+                            <!-- Description -->
+                            <StackPanel>
+                                <TextBlock Text="Description:"/>
+                                <TextBox AcceptsReturn="True"
+                                         Height="120"
+                                         Watermark="Enter feature description here"/>
+                            </StackPanel>
+
+                        </StackPanel>
+
+                    </Border>
+
+                </Expander>
+
+            </StackPanel>
+
+        </Grid>
+    </ScrollViewer>
+
+</UserControl>
