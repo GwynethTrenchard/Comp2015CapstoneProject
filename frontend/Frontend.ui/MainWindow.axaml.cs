@@ -11,7 +11,7 @@ public partial class MainWindow : Window
         InitializeComponent();
         ContentArea.Content = new LandingPageView();
 
-        //ContentArea.Content = new FeatureView(); -> David's testing code please ignore
+        //ContentArea.Content = new NotesView(); //-> David's testing code please ignore
     }
 
     public void Navigate (UserControl newPage)

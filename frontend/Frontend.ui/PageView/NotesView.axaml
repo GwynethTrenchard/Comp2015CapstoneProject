@@ -1,0 +1,104 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="1980" d:DesignHeight="1080"
+             x:Class="Frontend.ui.NotesView">
+  <ScrollViewer>
+        <Grid RowDefinitions="Auto,Auto,*"
+              ColumnDefinitions="*,*,*"
+              RowSpacing="20"
+              Margin="20">
+
+            <!-- ===========================
+                 TOP BAR
+                 =========================== -->
+            <Grid Grid.ColumnSpan="3"
+                  ColumnDefinitions="Auto,*,Auto">
+
+                <Button Content="Delete"
+                        Width="180"
+                        Height="60"
+                        FontSize="24"
+                        FontWeight="Bold"
+                        HorizontalAlignment="Left"
+                        HorizontalContentAlignment="Center"
+                        VerticalContentAlignment="Center"/>
+                       
+                <TextBlock Grid.Column="1"
+                           Text="Notes"
+                           FontSize="64"
+                           FontWeight="Bold"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center"/>
+
+                <Button Grid.Column="2"
+                        Content="Return"
+                        Width="180"
+                        Height="60"
+                        FontSize="24"
+                        FontWeight="Bold"
+                        HorizontalAlignment="Right"
+                        HorizontalContentAlignment="Center"
+                        VerticalContentAlignment="Center"/>
+            </Grid>
+
+
+            <!-- ===========================
+                 HORIZONTAL DIVIDER
+                 =========================== -->
+            <Border Grid.Row="1"
+                    Grid.ColumnSpan="3"
+                    BorderBrush="#888"
+                    BorderThickness="0,0,0,4"
+                    Height="4"/>
+
+
+            <!-- ===========================
+                 TEXTBOX AREA (FULL WIDTH)
+                 =========================== -->
+            <Grid Grid.Row="2"
+                  Grid.ColumnSpan="3"
+                  ColumnDefinitions="*,4,*"
+                  Margin="0,20,0,0">
+
+                <!-- Private Notes (Left) -->
+                <TextBox Grid.Column="0"
+                         AcceptsReturn="True"
+                         TextWrapping="Wrap"
+                         Watermark="Private Notes (DM + Player only)"
+                         FontSize="18"
+                         Padding="10"
+                         VerticalAlignment="Stretch"
+                         HorizontalAlignment="Stretch"
+                         BorderBrush="#555"
+                         BorderThickness="4"
+                         CornerRadius="10"/>
+
+                <!-- Vertical Divider -->
+                <Border Grid.Column="1"
+                        BorderBrush="#888"
+                        BorderThickness="2,0,2,0"
+                        Width="4"/>
+
+                <!-- Public Notes (Right) -->
+                <TextBox Grid.Column="2"
+                         AcceptsReturn="True"
+                         TextWrapping="Wrap"
+                         Watermark="Public Notes (Visible to everyone)"
+                         FontSize="18"
+                         Padding="10"
+                         VerticalAlignment="Stretch"
+                         HorizontalAlignment="Stretch"
+                         BorderBrush="#555"
+                         BorderThickness="4"
+                         CornerRadius="10"/>
+
+            </Grid>
+
+        </Grid>
+    </ScrollViewer>
+
+
+
+</UserControl>

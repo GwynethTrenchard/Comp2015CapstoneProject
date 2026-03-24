@@ -1,0 +1,167 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="1980" d:DesignHeight="1080"
+             x:Class="Frontend.ui.QuestView">
+  <ScrollViewer>
+        <Grid RowDefinitions="Auto,Auto,Auto,Auto,*"
+              ColumnDefinitions="*,2*,*"
+              RowSpacing="20"
+              Margin="20">
+
+            <!-- ===========================
+                 QUEST NAME (TOP CENTER)
+                 =========================== -->
+            <TextBlock Grid.Column="1"
+                       Text="Quest Name"
+                       FontSize="28"
+                       FontWeight="Bold"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Top"/>
+
+
+            <!-- ===========================
+                 DESCRIPTION (CENTER COLUMN)
+                 =========================== -->
+            <TextBox Grid.Row="1"
+                     Grid.Column="1"
+                     AcceptsReturn="True"
+                     TextWrapping="Wrap"
+                     Height="200"
+                     Watermark="Enter quest description here"
+                     HorizontalAlignment="Stretch"
+                     VerticalAlignment="Top"/>
+
+
+            <!-- ===========================
+                 LEFT SIDEBAR — DM NOTES
+                 =========================== -->
+            <Border Grid.Row="1"
+                    Grid.Column="0"
+                    Grid.RowSpan="3"
+                    BorderBrush="#888"
+                    BorderThickness="1"
+                    CornerRadius="6"
+                    Padding="10">
+
+                <ScrollViewer>
+                    <StackPanel Spacing="10">
+
+                        <!-- Example DM Note -->
+                        <Button Content="DM Note 1"
+                                Height="50"
+                                FontSize="18"
+                                FontWeight="Bold"
+                                HorizontalAlignment="Stretch"
+                                HorizontalContentAlignment="Center"
+                                VerticalContentAlignment="Center"/>
+
+                        <!-- Add New DM Note -->
+                        <Button Content="Add New DM Note"
+                                Height="50"
+                                FontSize="18"
+                                FontWeight="Bold"
+                                HorizontalAlignment="Stretch"
+                                HorizontalContentAlignment="Center"
+                                VerticalContentAlignment="Center"/>
+
+                    </StackPanel>
+                </ScrollViewer>
+
+            </Border>
+
+
+            <!-- ===========================
+                 RIGHT SIDEBAR — PLAYER JOURNALS
+                 =========================== -->
+            <Border Grid.Row="1"
+                    Grid.Column="2"
+                    Grid.RowSpan="3"
+                    BorderBrush="#888"
+                    BorderThickness="1"
+                    CornerRadius="6"
+                    Padding="10">
+
+                <ScrollViewer>
+                    <StackPanel Spacing="10">
+
+                        <!-- Example Player Journal -->
+                        <Button Content="Player1 - Journal"
+                                Height="50"
+                                FontSize="18"
+                                FontWeight="Bold"
+                                HorizontalAlignment="Stretch"
+                                HorizontalContentAlignment="Center"
+                                VerticalContentAlignment="Center"/>
+
+                    </StackPanel>
+                </ScrollViewer>
+
+            </Border>
+
+
+            <!-- ===========================
+                 ARCHIVE + CLONE BUTTONS (TIGHT GRID)
+                 =========================== -->
+            <Grid Grid.Row="2"
+                  Grid.Column="1"
+                  ColumnDefinitions="*,20,*"
+                  HorizontalAlignment="Center">
+
+                <Button Content="Archive"
+                        Grid.Column="0"
+                        Width="150"
+                        Height="50"
+                        FontSize="18"
+                        FontWeight="Bold"
+                        HorizontalContentAlignment="Center"
+                        VerticalContentAlignment="Center"/>
+
+                <Button Content="Clone"
+                        Grid.Column="2"
+                        Width="150"
+                        Height="50"
+                        FontSize="18"
+                        FontWeight="Bold"
+                        HorizontalContentAlignment="Center"
+                        VerticalContentAlignment="Center"/>
+
+            </Grid>
+
+
+            <!-- ===========================
+                 RETURN + DELETE BUTTONS (TIGHT GRID)
+                 =========================== -->
+            <Grid Grid.Row="3"
+                  Grid.Column="1"
+                  ColumnDefinitions="*,20,*"
+                  HorizontalAlignment="Center">
+
+                <Button Content="Return"
+                        Grid.Column="0"
+                        Width="150"
+                        Height="50"
+                        FontSize="18"
+                        FontWeight="Bold"
+                        HorizontalContentAlignment="Center"
+                        VerticalContentAlignment="Center"/>
+
+                <Button Content="Delete"
+                        Grid.Column="2"
+                        Width="150"
+                        Height="50"
+                        FontSize="18"
+                        FontWeight="Bold"
+                        HorizontalContentAlignment="Center"
+                        VerticalContentAlignment="Center"/>
+
+            </Grid>
+
+        </Grid>
+    </ScrollViewer>
+
+
+
+
+</UserControl>

@@ -116,6 +116,7 @@
                         VerticalAlignment="Center">
 
                     <TextBox AcceptsReturn="True"
+                             TextWrapping="Wrap"
                              Watermark="Add additional information here"/>
                 </Border>
 

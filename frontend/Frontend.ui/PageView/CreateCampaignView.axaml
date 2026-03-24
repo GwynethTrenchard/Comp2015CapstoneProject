@@ -32,6 +32,7 @@
             <StackPanel Spacing="6">
                 <TextBlock Text="Description" FontWeight="Bold"/>
                 <TextBox AcceptsReturn="True"
+                         TextWrapping="Wrap"
                          Height="120"
                          Watermark="Enter campaign description..."/>
             </StackPanel>

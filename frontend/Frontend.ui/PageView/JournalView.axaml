@@ -1,0 +1,119 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="1980" d:DesignHeight="1080"
+             x:Class="Frontend.ui.JournalView">
+ <ScrollViewer>
+        <Grid RowDefinitions="Auto,Auto,*"
+              ColumnDefinitions="*,*,*"
+              RowSpacing="20"
+              Margin="20">
+
+            <!-- ===========================
+                 TOP BAR
+                 =========================== -->
+            <Grid Grid.ColumnSpan="3"
+                  ColumnDefinitions="Auto,*,Auto">
+
+                <!-- Add Note Button -->
+                <Button Content="Add Note"
+                        Width="180"
+                        Height="60"
+                        FontSize="24"
+                        FontWeight="Bold"
+                        HorizontalContentAlignment="Center"
+                        VerticalContentAlignment="Center"
+                        HorizontalAlignment="Left"/>
+
+                <!-- Title -->
+                <TextBlock Grid.Column="1"
+                           Text="Journal"
+                           FontSize="64"
+                           FontWeight="Bold"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center"/>
+
+                <!-- Return Button -->
+                <Button Grid.Column="2"
+                        Content="Return"
+                        Width="180"
+                        Height="60"
+                        FontSize="24"
+                        FontWeight="Bold"
+                        HorizontalContentAlignment="Center"
+                        VerticalContentAlignment="Center"
+                        HorizontalAlignment="Right"/>
+            </Grid>
+
+
+            <!-- ===========================
+                 DIVIDER LINE
+                 =========================== -->
+            <Border Grid.Row="1"
+                    Grid.ColumnSpan="3"
+                    BorderBrush="#888"
+                    BorderThickness="0,0,0,2"
+                    Height="2"/>
+
+
+            <!-- ===========================
+                 NOTE GRID (UNIFORMGRID)
+                 =========================== -->
+            <ScrollViewer Grid.Row="2"
+                          Grid.ColumnSpan="3"
+                          VerticalScrollBarVisibility="Auto">
+
+                <UniformGrid Columns="2"
+                             HorizontalAlignment="Center"
+                             VerticalAlignment="Top"
+                             Margin="0,40,0,0">
+
+                    <!-- Larger Note Buttons with more spacing -->
+                    <Button Content="Note 1"
+                            Width="400"
+                            Height="115"
+                            FontSize="36"
+                            FontWeight="Bold"
+                            HorizontalContentAlignment="Center"
+                            VerticalContentAlignment="Center"
+                            Margin="60"/>
+
+                    <Button Content="Note 2"
+                            Width="400"
+                            Height="115"
+                            FontSize="36"
+                            FontWeight="Bold"
+                            HorizontalContentAlignment="Center"
+                            VerticalContentAlignment="Center"
+                            Margin="60"/>
+
+                    <Button Content="Note 3"
+                            Width="400"
+                            Height="115"
+                            FontSize="36"
+                            FontWeight="Bold"
+                            HorizontalContentAlignment="Center"
+                            VerticalContentAlignment="Center"
+                            Margin="60"/>
+
+                    <Button Content="Note 4"
+                            Width="400"
+                            Height="115"
+                            FontSize="36"
+                            FontWeight="Bold"
+                            HorizontalContentAlignment="Center"
+                            VerticalContentAlignment="Center"
+                            Margin="60"/>
+
+                </UniformGrid>
+
+            </ScrollViewer>
+
+        </Grid>
+    </ScrollViewer>
+
+
+
+
+</UserControl>
