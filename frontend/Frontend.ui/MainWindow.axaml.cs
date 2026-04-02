@@ -42,4 +42,16 @@ public partial class MainWindow : Window
     //{
     //    ContentArea.Content = new JoinCampaignView();
     //}
+    //public void NavigateToJournal()
+    //{
+    //    ContentArea.Content = new JournalView();
+    //}
+    //public void NavigateToNotes()
+    //{
+    //    ContentArea.Content = new NotesView();
+    //}
+    //public void NavigateToQuest()
+    //{
+    //    ContentArea.Content = new QuestView();
+    //}
 }
