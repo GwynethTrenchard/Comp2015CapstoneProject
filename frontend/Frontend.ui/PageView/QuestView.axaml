@@ -35,7 +35,7 @@
 
 
             <!-- ===========================
-                 LEFT SIDEBAR — DM NOTES
+                 LEFT SIDEBAR â€” DM NOTES
                  =========================== -->
             <Border Grid.Row="1"
                     Grid.Column="0"
@@ -73,7 +73,7 @@
 
 
             <!-- ===========================
-                 RIGHT SIDEBAR — PLAYER JOURNALS
+                 RIGHT SIDEBAR â€” PLAYER JOURNALS
                  =========================== -->
             <Border Grid.Row="1"
                     Grid.Column="2"
@@ -139,6 +139,7 @@
                   HorizontalAlignment="Center">
 
                 <Button Content="Return"
+						Click="OnReturnClicked"
                         Grid.Column="0"
                         Width="150"
                         Height="50"
