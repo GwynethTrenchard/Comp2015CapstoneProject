@@ -82,10 +82,9 @@
                         Width="4"/>
 
                 <!-- Public Notes (Right) -->
-                <TextBox Grid.Column="2"
-                         AcceptsReturn="True"
-                         TextWrapping="Wrap"
-                         Watermark="Public Notes (Visible to everyone)"
+                <Button Grid.Column="2"
+						 Click="OnReturnClicked"
+                         Content="Return"
                          FontSize="18"
                          Padding="10"
                          VerticalAlignment="Stretch"
