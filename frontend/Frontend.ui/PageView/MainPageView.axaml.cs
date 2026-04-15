@@ -3,6 +3,7 @@ using Avalonia.Controls;
 using Avalonia.Interactivity;
 using Avalonia.Markup.Xaml;
 using Frontend.ui.PageView;
+using static Frontend.ui.Services.ApiService;
 
 namespace Frontend.ui;
 

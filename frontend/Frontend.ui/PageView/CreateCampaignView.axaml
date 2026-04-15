@@ -25,13 +25,14 @@
             <!-- Campaign Name -->
             <StackPanel Spacing="6">
                 <TextBlock Text="Campaign Name" FontWeight="Bold"/>
-                <TextBox Watermark="Enter campaign name..."/>
+                <TextBox x:Name="CampaignNameBox" Watermark="Enter campaign name..."/>
             </StackPanel>
 
             <!-- Description -->
             <StackPanel Spacing="6">
                 <TextBlock Text="Description" FontWeight="Bold"/>
                 <TextBox AcceptsReturn="True"
+                         x:Name="DescriptionBox"
                          TextWrapping="Wrap"
                          Height="120"
                          Watermark="Enter campaign description..."/>
@@ -55,7 +56,10 @@
             </StackPanel>
 
             <!-- Create Button (now directly under description) -->
-            <Button Content="Create Campaign"
+                    
+            <Button x:Name="CreateCampaignButton"
+                    Click="OnCreateCampaignClicked"
+                    Content="Create Campaign"
                     Width="200"
                     HorizontalAlignment="Center"
                     Margin="0,10,0,0"/>
