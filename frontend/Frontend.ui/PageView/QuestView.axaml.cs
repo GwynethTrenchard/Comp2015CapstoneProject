@@ -18,7 +18,22 @@ public partial class QuestView : UserControl
         var window = this.VisualRoot as MainWindow;
         if (window != null)
         {
-            window.Navigate(new LandingPageView());
+            window.Navigate(new CampaignView());
         }
+    }
+
+    private void OnJournalClicked(object? sender, RoutedEventArgs e)
+    {
+        (TopLevel.GetTopLevel(this) as MainWindow)?.Navigate(new JournalView());
+    }
+
+    private void OnNoteClicked(object? sender, RoutedEventArgs e)
+    {
+        (TopLevel.GetTopLevel(this) as MainWindow)?.Navigate(new NotesView());
+    }
+
+    private void OnCreateNoteClicked(object? sender, RoutedEventArgs e)
+    {
+        (TopLevel.GetTopLevel(this) as MainWindow)?.Navigate(new NotesView());
     }
 }

@@ -9,7 +9,7 @@ public partial class MainWindow : Window
     public MainWindow()
     {
         InitializeComponent();
-        ContentArea.Content = new LandingPageView();
+        ContentArea.Content = new MainPageView();
 
         //ContentArea.Content = new NotesView(); //-> David's testing code please ignore
     }
@@ -41,5 +41,10 @@ public partial class MainWindow : Window
     //public void NavigateToJoin()
     //{
     //    ContentArea.Content = new JoinCampaignView();
+    //}
+
+    //public void NavigateToNotes()
+    //{
+    //    ContentArea.Content = new NotesView();
     //}
 }

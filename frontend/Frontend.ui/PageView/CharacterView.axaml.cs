@@ -1,5 +1,6 @@
 using Avalonia;
 using Avalonia.Controls;
+using Avalonia.Interactivity;
 using Avalonia.Markup.Xaml;
 
 namespace Frontend.ui;
@@ -9,6 +10,21 @@ public partial class CharacterView : UserControl
     public CharacterView()
     {
         InitializeComponent();
+    }
+
+    private void OnReturnClicked(object? sender, RoutedEventArgs e)
+    {
+        (TopLevel.GetTopLevel(this) as MainWindow)?.Navigate(new CampaignView());
+    }
+
+    private void OnFeaturesClicked(object? sender, RoutedEventArgs e)
+    {
+        (TopLevel.GetTopLevel(this) as MainWindow)?.Navigate(new FeatureView());
+    }
+
+    private void OnSpellsClicked(object? sender, RoutedEventArgs e)
+    {
+        (TopLevel.GetTopLevel(this) as MainWindow)?.Navigate(new SpellView());
     }
 }
 

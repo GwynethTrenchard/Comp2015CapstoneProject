@@ -21,8 +21,12 @@ public partial class MainPageView : UserControl
     {
         (TopLevel.GetTopLevel(this) as MainWindow)?.Navigate(new CreateCampaignView());
     }
-    private void OnJoinClicked(object? sender, RoutedEventArgs e)
+    private void OnJoinCampaignClicked(object? sender, RoutedEventArgs e)
     {
         (TopLevel.GetTopLevel(this) as MainWindow)?.Navigate(new JoinCampaignView());
+    }
+    private void OnJoinClicked(object? sender, RoutedEventArgs e)
+    {
+        (TopLevel.GetTopLevel(this) as MainWindow)?.Navigate(new CampaignView());
     }
 }

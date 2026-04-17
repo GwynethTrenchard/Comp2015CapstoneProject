@@ -8,8 +8,8 @@
 
         <!-- Top Bar with Back Button -->
         <Grid>
-            <Button Content="Back"
-                    Click="OnBackClicked"
+            <Button Content="Return"
+                    Click="OnReturnClicked"
                     HorizontalAlignment="Right"
                     VerticalAlignment="Top"
                     Width="80"/>

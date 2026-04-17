@@ -11,7 +11,7 @@ public partial class JoinCampaignView : UserControl
     {
         InitializeComponent();
     }
-    private void OnBackClicked(object? sender, RoutedEventArgs e)
+    private void OnReturnClicked(object? sender, RoutedEventArgs e)
     {
         (TopLevel.GetTopLevel(this) as MainWindow)?.Navigate(new MainPageView());
     }
