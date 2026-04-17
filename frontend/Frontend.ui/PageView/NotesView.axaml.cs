@@ -18,7 +18,7 @@ public partial class NotesView : UserControl
         var window = this.VisualRoot as MainWindow;
         if (window != null)
         {
-            window.Navigate(new LandingPageView());
+            window.Navigate(new QuestView());
         }
     }
 }

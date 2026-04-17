@@ -37,7 +37,7 @@
                     VerticalContentAlignment="Center"/>
 
             <Button Content="Join Campaign"
-                    Click="OnJoinClicked"
+                    Click="OnJoinCampaignClicked"
                     Width="220"
                     Height="60"
                     FontSize="24"
@@ -113,6 +113,7 @@
 
                 <!-- NEW: Join Button -->
                 <Button Content="Join"
+                        Click="OnJoinClicked"
                         Width="140"
                         Height="40"
                         FontSize="18"
@@ -180,6 +181,7 @@
 
                 <!-- NEW: Join Button -->
                 <Button Content="Join"
+                        Click="OnJoinClicked"
                         Width="140"
                         Height="40"
                         FontSize="18"

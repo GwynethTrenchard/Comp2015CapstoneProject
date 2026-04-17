@@ -30,12 +30,14 @@
                                 HorizontalAlignment="Stretch">
 
                         <Button Content="Quest 1"
+                                Click="OnQuestClicked"
                                 HorizontalContentAlignment="Center"
                                 VerticalContentAlignment="Center"
                                 Height="40"
                                 HorizontalAlignment="Stretch"/>
 
-                        <Button Content="+ New Quest"
+                        <Button Content="Create New Quest"
+                                Click="OnCreateQuestClicked"
                                 HorizontalContentAlignment="Center"
                                 VerticalContentAlignment="Center"
                                 Height="40"
@@ -94,6 +96,7 @@
             </StackPanel>
 
             <Button Content="Return"
+                    Click="OnReturnClicked"
                     Width="130"
                     Height="35"
                     HorizontalAlignment="Center"/>
@@ -134,6 +137,7 @@
 
                         <!-- Character buttons centered horizontally + vertically -->
                         <Button Content="Character 1"
+                                Click="OnCharacterClicked"
                                 FontSize="18"
                                 Height="55"
                                 HorizontalContentAlignment="Center"

@@ -18,7 +18,8 @@
                            HorizontalAlignment="Center"/>
 
                 <Button Grid.Column="1"
-                        Content="Back"
+                        Click="OnReturnClicked"
+                        Content="Return"
                         Width="90"
                         Height="35"
                         HorizontalAlignment="Right"/>
@@ -250,12 +251,14 @@
                   Margin="0,20,0,0">
 
                 <Button Content="Go to Spells"
+                        Click="OnSpellsClicked"
                         Height="60"
                         Width="200"
                         HorizontalAlignment="Left"/>
 
                 <Button Grid.Column="1"
                         Content="Go to Features"
+                        Click="OnFeaturesClicked"
                         Height="60"
                         Width="200"
                         HorizontalAlignment="Right"/>

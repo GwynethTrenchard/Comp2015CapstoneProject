@@ -29,6 +29,7 @@
                 <!-- Return Button (top-right) -->
                 <Button Grid.Column="2"
                         Content="Return"
+                        Click="OnReturnClicked"
                         Width="120"
                         Height="40"
                         HorizontalAlignment="Right"/>

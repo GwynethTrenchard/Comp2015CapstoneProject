@@ -34,6 +34,7 @@
 
                 <Button Grid.Column="2"
                         Content="Return"
+                        Click="OnReturnClicked"
                         Width="180"
                         Height="60"
                         FontSize="24"
@@ -82,9 +83,10 @@
                         Width="4"/>
 
                 <!-- Public Notes (Right) -->
-                <Button Grid.Column="2"
-						 Click="OnReturnClicked"
-                         Content="Return"
+                <TextBox Grid.Column="2"
+                         AcceptsReturn="True"
+                         TextWrapping="Wrap"
+                         Watermark="Public Notes (Global Access)"
                          FontSize="18"
                          Padding="10"
                          VerticalAlignment="Stretch"

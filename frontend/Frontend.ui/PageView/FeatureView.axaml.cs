@@ -1,5 +1,6 @@
 using Avalonia;
 using Avalonia.Controls;
+using Avalonia.Interactivity;
 using Avalonia.Markup.Xaml;
 
 namespace Frontend.ui;
@@ -9,6 +10,10 @@ public partial class FeatureView : UserControl
     public FeatureView()
     {
         InitializeComponent();
+    }
+    private void OnReturnClicked(object? sender, RoutedEventArgs e)
+    {
+        (TopLevel.GetTopLevel(this) as MainWindow)?.Navigate(new CharacterView());
     }
 }
 

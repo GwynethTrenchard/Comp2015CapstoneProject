@@ -18,8 +18,13 @@ public partial class JournalView : UserControl
         var window = this.VisualRoot as MainWindow;
         if (window != null)
         {
-            window.Navigate(new LandingPageView());
+            window.Navigate(new QuestView());
         }
+    }
+
+    private void OnNoteClicked(object? sender, RoutedEventArgs e)
+    {
+        (TopLevel.GetTopLevel(this) as MainWindow)?.Navigate(new NotesView());
     }
 
     private void OnAddNoteClicked(object sender, RoutedEventArgs e)
