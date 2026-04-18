@@ -50,7 +50,7 @@
 
                         <!-- Example DM Note -->
                         <Button Content="DM Note 1"
-                                Click="OnNoteClicked"
+                                Click="OnDMNoteClicked"
                                 Height="50"
                                 FontSize="18"
                                 FontWeight="Bold"
@@ -59,14 +59,45 @@
                                 VerticalContentAlignment="Center"/>
 
                         <!-- Add New DM Note -->
-                        <Button Content="Add New DM Note"
-                                Click="OnCreateNoteClicked"
+                        <StackPanel Grid.Row="1" Spacing="15">
+
+                
+                <Expander Header="Create a New Note"
+                          IsExpanded="False">
+
+                    
+
+                        <StackPanel Spacing="10">
+
+                            <!-- Note -->
+                            <StackPanel>
+                                <TextBlock Text="Private Note:"/>
+                                <TextBox AcceptsReturn="True"
+                                         TextWrapping="Wrap"
+                                         Height="120"
+                                         Watermark="Enter Private Note Here"/>
+                            </StackPanel>
+
+                            <StackPanel>
+                                <TextBlock Text="Public Note:"/>
+                                <TextBox AcceptsReturn="True"
+                                         TextWrapping="Wrap"
+                                         Height="120"
+                                         Watermark="Enter Public Note Here"/>
+                            </StackPanel>
+                            
+                            <Button Content="Save Note"
+                                Click="OnSaveDMNoteClicked"
                                 Height="50"
                                 FontSize="18"
                                 FontWeight="Bold"
                                 HorizontalAlignment="Stretch"
                                 HorizontalContentAlignment="Center"
                                 VerticalContentAlignment="Center"/>
+
+                          </StackPanel>
+                          </Expander>
+                        </StackPanel>
 
                     </StackPanel>
                 </ScrollViewer>

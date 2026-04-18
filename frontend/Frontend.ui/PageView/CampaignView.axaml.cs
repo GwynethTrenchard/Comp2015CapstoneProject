@@ -32,5 +32,10 @@ public partial class CampaignView : UserControl
         (TopLevel.GetTopLevel(this) as MainWindow)?.Navigate(new CharacterView());
     }
 
+    private void OnCreateCharacterClicked(object? sender, RoutedEventArgs e)
+    {
+        (TopLevel.GetTopLevel(this) as MainWindow)?.Navigate(new CreateCharacterView());
+    }
+
 
 }

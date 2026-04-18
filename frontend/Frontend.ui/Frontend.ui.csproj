@@ -19,13 +19,26 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <AvaloniaXaml Update="PageView\DMNotesView.axaml">
+	    <SubType>Designer</SubType>
+	  </AvaloniaXaml>
+	</ItemGroup>
+
+	<ItemGroup>
 		<Compile Update="GlobalUI\HeaderView.axaml.cs">
 			<DependentUpon>HeaderView.axaml</DependentUpon>
+		</Compile>
+		<Compile Update="PageView\CreateCharacterView.axaml.cs">
+		  <DependentUpon>CreateCharacterView.axaml</DependentUpon>
 		</Compile>
 	</ItemGroup>
 	<ItemGroup>
 		<Compile Update="PageView\LoginPageView.axaml.cs">
 			<DependentUpon>LoginPageView.axaml</DependentUpon>
+		</Compile>
+		<Compile Update="PageView\DMNotesView.axaml.cs">
+		  <SubType>Code</SubType>
+		  <DependentUpon>DMNotesView.axaml</DependentUpon>
 		</Compile>
 	</ItemGroup>
 </Project>

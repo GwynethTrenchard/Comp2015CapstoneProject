@@ -6,9 +6,9 @@ using Frontend.ui.PageView;
 
 namespace Frontend.ui;
 
-public partial class NotesView : UserControl
+public partial class DMNotesView : UserControl
 {
-    public NotesView()
+    public DMNotesView()
     {
         InitializeComponent();
     }
@@ -18,7 +18,8 @@ public partial class NotesView : UserControl
         var window = this.VisualRoot as MainWindow;
         if (window != null)
         {
-            window.Navigate(new JournalView());
+            window.Navigate(new QuestView());
         }
     }
 }
+

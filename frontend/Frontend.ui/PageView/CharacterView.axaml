@@ -70,7 +70,9 @@
 
                         <StackPanel Orientation="Horizontal">
                             <TextBlock Text="Level:" Width="100"/>
-                            <TextBox Width="150" Watermark="Enter number"/>
+                            <TextBox x:Name="LevelBox" Width="150" 
+                                     Watermark="Enter number"
+                                     TextChanged="OnLevelChanged"/>
                         </StackPanel>
 
                         <StackPanel Orientation="Horizontal">
@@ -148,49 +150,61 @@
 
                             <StackPanel Orientation="Horizontal">
                                 <TextBlock Text="Strength:" Width="140"/>
-                                <TextBox Width="60" Watermark="0"/>
+                                <TextBox x:Name="StrengthBox" Width="60" 
+                                         Watermark="0"
+                                         TextChanged="OnAbilityChanged"/>
                                 <Border BorderBrush="#444" BorderThickness="1" CornerRadius="4" Padding="4" Margin="10,0,0,0">
-                                    <TextBlock Text="+0"/>
+                                    <TextBlock x:Name="StrengthMod" Text="+0"/>
                                 </Border>
                             </StackPanel>
 
                             <StackPanel Orientation="Horizontal">
                                 <TextBlock Text="Dexterity:" Width="140"/>
-                                <TextBox Width="60" Watermark="0"/>
+                                <TextBox x:Name="DexterityBox"
+                                          Width="60" Watermark="0"
+                                          TextChanged="OnAbilityChanged"/>
                                 <Border BorderBrush="#444" BorderThickness="1" CornerRadius="4" Padding="4" Margin="10,0,0,0">
-                                    <TextBlock Text="+0"/>
+                                    <TextBlock x:Name="DexterityMod" Text="+0"/>
                                 </Border>
                             </StackPanel>
 
                             <StackPanel Orientation="Horizontal">
                                 <TextBlock Text="Constitution:" Width="140"/>
-                                <TextBox Width="60" Watermark="0"/>
+                                <TextBox x:Name="ConstitutionBox"
+                                          Width="60" Watermark="0"
+                                          TextChanged="OnAbilityChanged"/>
                                 <Border BorderBrush="#444" BorderThickness="1" CornerRadius="4" Padding="4" Margin="10,0,0,0">
-                                    <TextBlock Text="+0"/>
+                                    <TextBlock x:Name="ConstitutionMod" Text="+0"/>
                                 </Border>
                             </StackPanel>
 
                             <StackPanel Orientation="Horizontal">
                                 <TextBlock Text="Intelligence:" Width="140"/>
-                                <TextBox Width="60" Watermark="0"/>
+                                <TextBox x:Name="IntelligenceBox"
+                                          Width="60" Watermark="0"
+                                          TextChanged="OnAbilityChanged"/>
                                 <Border BorderBrush="#444" BorderThickness="1" CornerRadius="4" Padding="4" Margin="10,0,0,0">
-                                    <TextBlock Text="+0"/>
+                                    <TextBlock x:Name="IntelligenceMod" Text="+0"/>
                                 </Border>
                             </StackPanel>
 
                             <StackPanel Orientation="Horizontal">
                                 <TextBlock Text="Wisdom:" Width="140"/>
-                                <TextBox Width="60" Watermark="0"/>
+                                <TextBox x:Name="WisdomBox"
+                                          Width="60" Watermark="0"
+                                          TextChanged="OnAbilityChanged"/>
                                 <Border BorderBrush="#444" BorderThickness="1" CornerRadius="4" Padding="4" Margin="10,0,0,0">
-                                    <TextBlock Text="+0"/>
+                                    <TextBlock x:Name="WisdomMod" Text="+0"/>
                                 </Border>
                             </StackPanel>
 
                             <StackPanel Orientation="Horizontal">
                                 <TextBlock Text="Charisma:" Width="140"/>
-                                <TextBox Width="60" Watermark="0"/>
+                                <TextBox x:Name="CharismaBox"
+                                          Width="60" Watermark="0"
+                                          TextChanged="OnAbilityChanged"/>
                                 <Border BorderBrush="#444" BorderThickness="1" CornerRadius="4" Padding="4" Margin="10,0,0,0">
-                                    <TextBlock Text="+0"/>
+                                    <TextBlock x:Name="CharismaMod" Text="+0"/>
                                 </Border>
                             </StackPanel>
 
@@ -234,7 +248,7 @@
 
                         <StackPanel Orientation="Horizontal">
                             <TextBlock Text="Prof Bonus:" Width="120"/>
-                            <TextBlock Text="+0" FontWeight="Bold"/>
+                            <TextBlock x:Name="ProfBonusText" Text="+0" FontWeight="Bold"/>
                         </StackPanel>
 
                     </StackPanel>

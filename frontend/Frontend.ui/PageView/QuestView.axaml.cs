@@ -32,8 +32,13 @@ public partial class QuestView : UserControl
         (TopLevel.GetTopLevel(this) as MainWindow)?.Navigate(new NotesView());
     }
 
-    private void OnCreateNoteClicked(object? sender, RoutedEventArgs e)
+    private void OnDMNoteClicked(object? sender, RoutedEventArgs e)
     {
-        (TopLevel.GetTopLevel(this) as MainWindow)?.Navigate(new NotesView());
+        (TopLevel.GetTopLevel(this) as MainWindow)?.Navigate(new DMNotesView());
+    }
+
+    private void OnSaveDMNoteClicked(object? sender, RoutedEventArgs e)
+    {
+        (TopLevel.GetTopLevel(this) as MainWindow)?.Navigate(new QuestView());
     }
 }

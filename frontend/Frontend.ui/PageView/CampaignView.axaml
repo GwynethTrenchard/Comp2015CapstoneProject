@@ -145,6 +145,7 @@
                                 HorizontalAlignment="Stretch"/>
 
                         <Button Content="Create New Character"
+                                Click="OnCreateCharacterClicked"
                                 FontSize="18"
                                 Height="55"
                                 HorizontalContentAlignment="Center"

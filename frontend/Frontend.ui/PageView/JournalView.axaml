@@ -18,7 +18,6 @@
 
                 <!-- Add Note Button -->
                 <Button Content="Add Note"
-                        Click="OnAddNoteClicked"
                         Width="180"
                         Height="60"
                         FontSize="24"
@@ -26,6 +25,7 @@
                         HorizontalContentAlignment="Center"
                         VerticalContentAlignment="Center"
                         HorizontalAlignment="Left"/>
+                
 
                 <!-- Title -->
                 <TextBlock Grid.Column="1"
@@ -92,29 +92,55 @@
                             VerticalContentAlignment="Center"
                             Margin="60"/>
 
-                    <Button Content="Note 3"
-                            Click="OnNoteClicked"
-                            Width="400"
-                            Height="115"
-                            FontSize="36"
-                            FontWeight="Bold"
-                            HorizontalContentAlignment="Center"
-                            VerticalContentAlignment="Center"
-                            Margin="60"/>
-
-                    <Button Content="Note 4"
-                            Click="OnNoteClicked"
-                            Width="400"
-                            Height="115"
-                            FontSize="36"
-                            FontWeight="Bold"
-                            HorizontalContentAlignment="Center"
-                            VerticalContentAlignment="Center"
-                            Margin="60"/>
 
                 </UniformGrid>
 
             </ScrollViewer>
+
+             <Border Grid.Row="3"
+                    Grid.Column="1">
+                 <!-- Add Note Button -->
+                <Expander Header="Create a New Note"
+                          Width="400"
+                          FontSize="36"
+                          FontWeight="Bold"
+                          HorizontalContentAlignment="Center"
+                          VerticalContentAlignment="Center"
+                          Margin="60"
+                          IsExpanded="False">
+
+                        <StackPanel Spacing="10">
+
+                            <!-- Description -->
+                            <StackPanel>
+                                <TextBlock Text="Private Note:"/>
+                                <TextBox AcceptsReturn="True"
+                                         TextWrapping="Wrap"
+                                         Height="120"
+                                         Watermark="Enter Private Note Here"/>
+                            </StackPanel>
+
+                            <StackPanel>
+                                <TextBlock Text="Public Note:"/>
+                                <TextBox AcceptsReturn="True"
+                                         TextWrapping="Wrap"
+                                         Height="120"
+                                         Watermark="Enter Public Note Here"/>
+                            </StackPanel>
+
+                            <Button Content="Save Note"
+                                Click="OnSaveNoteClicked"
+                                Height="50"
+                                FontSize="18"
+                                FontWeight="Bold"
+                                HorizontalAlignment="Stretch"
+                                HorizontalContentAlignment="Center"
+                                VerticalContentAlignment="Center"/>
+
+                        </StackPanel>
+                </Expander>
+
+            </Border>
 
         </Grid>
     </ScrollViewer>
@@ -123,3 +149,4 @@
 
 
 </UserControl>
+ 
