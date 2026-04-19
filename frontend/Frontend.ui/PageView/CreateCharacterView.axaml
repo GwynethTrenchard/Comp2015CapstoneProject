@@ -1,0 +1,286 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="1980" d:DesignHeight="1080"
+             x:Class="Frontend.ui.CreateCharacterView">
+  <ScrollViewer>
+       <Grid RowDefinitions="Auto,Auto,Auto,Auto,*" RowSpacing="20" Margin="20">
+
+            <!-- ===========================
+                 TOP BAR
+                 =========================== -->
+            <Grid ColumnDefinitions="*, Auto">
+
+                <TextBlock Text="Character Name"
+                           FontSize="26"
+                           FontWeight="Bold"
+                           HorizontalAlignment="Center"/>
+
+                <Button Grid.Column="1"
+                        Click="OnReturnClicked"
+                        Content="Return"
+                        Width="90"
+                        Height="35"
+                        HorizontalAlignment="Right"/>
+            </Grid>
+
+
+            <!-- ===========================
+                 IMAGE + DETAILS + ADDITIONAL INFO
+                 =========================== -->
+            <Grid Grid.Row="1"
+                  ColumnDefinitions="Auto, 20, Auto, 20, *">
+
+                <!-- LEFT COLUMN -->
+                <StackPanel Grid.Column="0" Spacing="10">
+
+                    <Button Content="Insert Picture"
+                            Width="150"
+                            Height="40"/>
+
+                    <Border BorderBrush="#666"
+                            BorderThickness="2"
+                            CornerRadius="6"
+                            Height="260"
+                            Width="300">
+                        <TextBlock Text="Character Image"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"/>
+                    </Border>
+
+                </StackPanel>
+
+
+                <!-- CHARACTER DETAILS -->
+                <Border Grid.Column="2"
+                        BorderBrush="#888"
+                        BorderThickness="1"
+                        CornerRadius="6"
+                        Padding="10"
+                        Width="300"
+                        VerticalAlignment="Center">
+
+                    <StackPanel Spacing="6">
+
+                        <TextBlock Text="Character Details"
+                                   FontWeight="Bold"
+                                   FontSize="16"
+                                   HorizontalAlignment="Center"/>
+
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Level:" Width="100"/>
+                            <TextBox x:Name="LevelBox" Width="150" 
+                                     Watermark="Enter number"
+                                     TextChanged="OnLevelChanged"/>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Class:" Width="100"/>
+                            <TextBox Width="150"/>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Subclass:" Width="100"/>
+                            <TextBox Width="150"/>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Race:" Width="100"/>
+                            <TextBox Width="150"/>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Alignment:" Width="100"/>
+                            <TextBox Width="150"/>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="AC:" Width="100"/>
+                            <TextBox Width="150"/>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Initiative:" Width="100"/>
+                            <TextBox Width="150"/>
+                        </StackPanel>
+
+                    </StackPanel>
+                </Border>
+
+
+                <!-- ADDITIONAL INFO -->
+                <Border Grid.Column="4"
+                        BorderBrush="#888"
+                        BorderThickness="1"
+                        CornerRadius="6"
+                        Padding="10"
+                        Height="260"
+                        VerticalAlignment="Center">
+
+                    <TextBox AcceptsReturn="True"
+                             TextWrapping="Wrap"
+                             Watermark="Add additional information here"/>
+                </Border>
+
+            </Grid>
+
+
+            <!-- ===========================
+                 ABILITY SCORES + PROFICIENCIES
+                 =========================== -->
+            <Grid Grid.Row="2"
+                  ColumnDefinitions="Auto, 20, *">
+
+                <!-- ABILITY SCORES -->
+                <Border Grid.Column="0"
+                        BorderBrush="#888"
+                        BorderThickness="1"
+                        CornerRadius="6"
+                        Padding="10"
+                        Width="300">
+
+                    <StackPanel Spacing="10">
+
+                        <TextBlock Text="Ability Scores"
+                                   FontSize="18"
+                                   FontWeight="Bold"/>
+
+                        <StackPanel Spacing="6">
+
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="Strength:" Width="140"/>
+                                <TextBox x:Name="StrengthBox" Width="60" 
+                                         Watermark="0"
+                                         TextChanged="OnAbilityChanged"/>
+                                <Border BorderBrush="#444" BorderThickness="1" CornerRadius="4" Padding="4" Margin="10,0,0,0">
+                                    <TextBlock x:Name="StrengthMod" Text="+0"/>
+                                </Border>
+                            </StackPanel>
+
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="Dexterity:" Width="140"/>
+                                <TextBox x:Name="DexterityBox"
+                                          Width="60" Watermark="0"
+                                          TextChanged="OnAbilityChanged"/>
+                                <Border BorderBrush="#444" BorderThickness="1" CornerRadius="4" Padding="4" Margin="10,0,0,0">
+                                    <TextBlock x:Name="DexterityMod" Text="+0"/>
+                                </Border>
+                            </StackPanel>
+
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="Constitution:" Width="140"/>
+                                <TextBox x:Name="ConstitutionBox"
+                                          Width="60" Watermark="0"
+                                          TextChanged="OnAbilityChanged"/>
+                                <Border BorderBrush="#444" BorderThickness="1" CornerRadius="4" Padding="4" Margin="10,0,0,0">
+                                    <TextBlock x:Name="ConstitutionMod" Text="+0"/>
+                                </Border>
+                            </StackPanel>
+
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="Intelligence:" Width="140"/>
+                                <TextBox x:Name="IntelligenceBox"
+                                          Width="60" Watermark="0"
+                                          TextChanged="OnAbilityChanged"/>
+                                <Border BorderBrush="#444" BorderThickness="1" CornerRadius="4" Padding="4" Margin="10,0,0,0">
+                                    <TextBlock x:Name="IntelligenceMod" Text="+0"/>
+                                </Border>
+                            </StackPanel>
+
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="Wisdom:" Width="140"/>
+                                <TextBox x:Name="WisdomBox"
+                                          Width="60" Watermark="0"
+                                          TextChanged="OnAbilityChanged"/>
+                                <Border BorderBrush="#444" BorderThickness="1" CornerRadius="4" Padding="4" Margin="10,0,0,0">
+                                    <TextBlock x:Name="WisdomMod" Text="+0"/>
+                                </Border>
+                            </StackPanel>
+
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="Charisma:" Width="140"/>
+                                <TextBox x:Name="CharismaBox"
+                                          Width="60" Watermark="0"
+                                          TextChanged="OnAbilityChanged"/>
+                                <Border BorderBrush="#444" BorderThickness="1" CornerRadius="4" Padding="4" Margin="10,0,0,0">
+                                    <TextBlock x:Name="CharismaMod" Text="+0"/>
+                                </Border>
+                            </StackPanel>
+
+                        </StackPanel>
+                    </StackPanel>
+                </Border>
+
+
+                <!-- PROFICIENCIES -->
+                <Border Grid.Column="2"
+                        BorderBrush="#888"
+                        BorderThickness="1"
+                        CornerRadius="6"
+                        Padding="10">
+
+                    <StackPanel Spacing="10">
+
+                        <TextBlock Text="Proficiencies"
+                                   FontSize="18"
+                                   FontWeight="Bold"/>
+
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Armor Prof:" Width="120"/>
+                            <TextBox HorizontalAlignment="Stretch"/>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Weapon Prof:" Width="120"/>
+                            <TextBox HorizontalAlignment="Stretch"/>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Tool Prof:" Width="120"/>
+                            <TextBox HorizontalAlignment="Stretch"/>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Skill Prof:" Width="120"/>
+                            <TextBox HorizontalAlignment="Stretch"/>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="Prof Bonus:" Width="120"/>
+                            <TextBlock x:Name="ProfBonusText" Text="+0" FontWeight="Bold"/>
+                        </StackPanel>
+
+                    </StackPanel>
+                </Border>
+
+            </Grid>
+
+
+            <!-- ===========================
+                 BOTTOM BUTTONS
+                 =========================== -->
+            <Grid Grid.Row="4"
+                  ColumnDefinitions="*, *"
+                  Margin="0,20,0,0">
+
+                <Button Grid.Column="1"
+                        Content="Save Character"
+                        Click="OnSaveCharacterClicked"
+                        Height="60"
+                        Width="200"
+                        HorizontalAlignment="Center"/>
+
+            </Grid>
+
+        </Grid>
+    </ScrollViewer>
+
+
+
+
+
+
+
+</UserControl>
+

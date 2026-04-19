@@ -27,8 +27,8 @@ public partial class JournalView : UserControl
         (TopLevel.GetTopLevel(this) as MainWindow)?.Navigate(new NotesView());
     }
 
-    private void OnAddNoteClicked(object sender, RoutedEventArgs e)
+    private void OnSaveNoteClicked(object sender, RoutedEventArgs e)
     {
-        // Placeholder for future logic
+        (TopLevel.GetTopLevel(this) as MainWindow)?.Navigate(new JournalView());
     }
 }
