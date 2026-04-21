@@ -41,7 +41,9 @@ public partial class CreateCampaignView : UserControl
 
         if (isSuccess)
         {
-            System.Diagnostics.Debug.WriteLine($"Success! Campaign '{name}' created by User {currentId}");
+            System.Diagnostics.Debug.WriteLine($"Success! Campaign '{name}' created.");
+
+            UserSession.ActiveCampaignId = null;
 
             (TopLevel.GetTopLevel(this) as MainWindow)?.Navigate(new CampaignView());
         }

@@ -12,7 +12,8 @@
                  =========================== -->
             <Grid ColumnDefinitions="*, Auto">
 
-                <TextBlock Text="Character Name"
+                <TextBox Text="Character Name"
+                         x:Name="CharacterNameInput"
                            FontSize="26"
                            FontWeight="Bold"
                            HorizontalAlignment="Center"/>
@@ -77,32 +78,32 @@
 
                         <StackPanel Orientation="Horizontal">
                             <TextBlock Text="Class:" Width="100"/>
-                            <TextBox Width="150"/>
+                            <TextBox x:Name="ClassInput" Width="150"/>
                         </StackPanel>
 
                         <StackPanel Orientation="Horizontal">
                             <TextBlock Text="Subclass:" Width="100"/>
-                            <TextBox Width="150"/>
+                            <TextBox x:Name="SubclassBox" Width="150"/>
                         </StackPanel>
 
                         <StackPanel Orientation="Horizontal">
                             <TextBlock Text="Race:" Width="100"/>
-                            <TextBox Width="150"/>
+                            <TextBox x:Name="RaceBox" Width="150"/>
                         </StackPanel>
 
                         <StackPanel Orientation="Horizontal">
-                            <TextBlock Text="Alignment:" Width="100"/>
-                            <TextBox Width="150"/>
+                            <TextBlock  Text="Alignment:" Width="100"/>
+                            <TextBox x:Name="AlignmentBox" Width="150"/>
                         </StackPanel>
 
                         <StackPanel Orientation="Horizontal">
                             <TextBlock Text="AC:" Width="100"/>
-                            <TextBox Width="150"/>
+                            <TextBox x:Name="ACBox" Width="150"/>
                         </StackPanel>
 
                         <StackPanel Orientation="Horizontal">
                             <TextBlock Text="Initiative:" Width="100"/>
-                            <TextBox Width="150"/>
+                            <TextBox x:Name="InitiativeBox" Width="150"/>
                         </StackPanel>
 
                     </StackPanel>
@@ -119,6 +120,7 @@
                         VerticalAlignment="Center">
 
                     <TextBox AcceptsReturn="True"
+                             x:Name="AdditionalNotesBox"
                              TextWrapping="Wrap"
                              Watermark="Add additional information here"/>
                 </Border>
@@ -228,22 +230,22 @@
 
                         <StackPanel Orientation="Horizontal">
                             <TextBlock Text="Armor Prof:" Width="120"/>
-                            <TextBox HorizontalAlignment="Stretch"/>
+                            <TextBox x:Name="ArmorProfBox" HorizontalAlignment="Stretch"/>
                         </StackPanel>
 
                         <StackPanel Orientation="Horizontal">
                             <TextBlock Text="Weapon Prof:" Width="120"/>
-                            <TextBox HorizontalAlignment="Stretch"/>
+                            <TextBox x:Name="WeaponProfBox" HorizontalAlignment="Stretch"/>
                         </StackPanel>
 
                         <StackPanel Orientation="Horizontal">
                             <TextBlock Text="Tool Prof:" Width="120"/>
-                            <TextBox HorizontalAlignment="Stretch"/>
+                            <TextBox x:Name="ToolProfBox" HorizontalAlignment="Stretch"/>
                         </StackPanel>
 
                         <StackPanel Orientation="Horizontal">
                             <TextBlock Text="Skill Prof:" Width="120"/>
-                            <TextBox HorizontalAlignment="Stretch"/>
+                            <TextBox x:Name="SkillProfBox" HorizontalAlignment="Stretch"/>
                         </StackPanel>
 
                         <StackPanel Orientation="Horizontal">

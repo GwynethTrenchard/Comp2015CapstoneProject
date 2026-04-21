@@ -9,7 +9,8 @@ public partial class MainWindow : Window
     public MainWindow()
     {
         InitializeComponent();
-        ContentArea.Content = new MainPageView();
+        //ContentArea.Content = new MainPageView();
+        ContentArea.Content = new LandingPageView();
 
         //ContentArea.Content = new NotesView(); //-> David's testing code please ignore
     }

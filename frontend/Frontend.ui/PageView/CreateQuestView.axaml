@@ -1,0 +1,78 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="1980" d:DesignHeight="1080"
+             x:Class="Frontend.ui.CreateQuestView">
+  <ScrollViewer>
+        <Grid RowDefinitions="Auto,Auto,Auto,Auto,*"
+              ColumnDefinitions="*,2*,*"
+              RowSpacing="20"
+              Margin="20">
+
+            <!-- ===========================
+                 QUEST NAME (TOP CENTER)
+                 =========================== -->
+            <TextBox Grid.Column="1"
+                       Text="Quest Name"
+                       x:Name="QuestNameInput"
+                       FontSize="28"
+                       FontWeight="Bold"
+                       HorizontalAlignment="Center"
+                       VerticalAlignment="Top"/>
+
+
+            <!-- ===========================
+                 DESCRIPTION (CENTER COLUMN)
+                 =========================== -->
+            <TextBox Grid.Row="1"
+                     Grid.Column="1"
+                     x:Name="QuestDescriptionInput"
+                     AcceptsReturn="True"
+                     TextWrapping="Wrap"
+                     Height="200"
+                     Watermark="Enter quest description here"
+                     HorizontalAlignment="Stretch"
+                     VerticalAlignment="Top"/>
+
+
+        
+
+
+            <!-- ===========================
+                 RETURN + DELETE BUTTONS (TIGHT GRID)
+                 =========================== -->
+            <Grid Grid.Row="3"
+                  Grid.Column="1"
+                  ColumnDefinitions="*,20,*"
+                  HorizontalAlignment="Center">
+
+                <Button Content="Return"
+						Click="OnReturnClicked"
+                        Grid.Column="0"
+                        Width="150"
+                        Height="50"
+                        FontSize="18"
+                        FontWeight="Bold"
+                        HorizontalContentAlignment="Center"
+                        VerticalContentAlignment="Center"/>
+
+                <Button Content="Create"
+                        Click="OnCreateClicked"
+                        Grid.Column="2"
+                        Width="150"
+                        Height="50"
+                        FontSize="18"
+                        FontWeight="Bold"
+                        HorizontalContentAlignment="Center"
+                        VerticalContentAlignment="Center"/>
+
+            </Grid>
+
+        </Grid>
+    </ScrollViewer>
+
+
+
+
+</UserControl>

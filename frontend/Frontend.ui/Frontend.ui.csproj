@@ -40,5 +40,8 @@
 		  <SubType>Code</SubType>
 		  <DependentUpon>DMNotesView.axaml</DependentUpon>
 		</Compile>
+		<Compile Update="PageView\CreateQuestView.axaml.cs">
+		  <DependentUpon>CreateQuestView.axaml</DependentUpon>
+		</Compile>
 	</ItemGroup>
 </Project>
