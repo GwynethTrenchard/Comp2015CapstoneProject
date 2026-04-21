@@ -1,8 +1,10 @@
-using System;
 using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Interactivity;
 using Avalonia.Markup.Xaml;
+using Frontend.ui.Services;
+using System;
+using System.Text.Json;
 
 namespace Frontend.ui;
 
@@ -17,11 +19,42 @@ public partial class CreateCharacterView : UserControl
     {
         (TopLevel.GetTopLevel(this) as MainWindow)?.Navigate(new CampaignView());
     }
-
-    private void OnSaveCharacterClicked(object? sender, RoutedEventArgs e)
+    private async void OnSaveCharacterClicked(object? sender, RoutedEventArgs e)
     {
-        (TopLevel.GetTopLevel(this) as MainWindow)?.Navigate(new CampaignView());
+        var api = new ApiService();
+        int? campaignId = UserSession.ActiveCampaignId;
+
+        if (campaignId == null) return;
+
+        int.TryParse(LevelBox.Text, out int levelValue);
+
+        var statsData = new
+        {
+            strength = StrengthBox.Text,
+            dexterity = DexterityBox.Text,
+            constitution = ConstitutionBox.Text,
+            intelligence = IntelligenceBox.Text,
+            wisdom = WisdomBox.Text,
+            charisma = CharismaBox.Text
+        };
+
+        string statsJson = JsonSerializer.Serialize(statsData);
+
+        bool success = await api.CreateCharacter(
+            campaignId.Value,
+            CharacterNameInput.Text ?? "New Hero",
+            ClassInput.Text ?? "Fighter",
+            levelValue, 
+            statsJson   
+        );
+
+        if (success)
+        {
+            (TopLevel.GetTopLevel(this) as MainWindow)?.Navigate(new CampaignView());
+        }
     }
+
+
 
     private int CalculateProficiency(int level)
     {

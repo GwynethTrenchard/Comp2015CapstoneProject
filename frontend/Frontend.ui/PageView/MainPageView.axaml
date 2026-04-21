@@ -73,6 +73,8 @@
 
                     <!-- Left Arrow -->
                     <Button Content="⟨"
+                            x:Name="PrevGameBtn"
+                            Click="OnPrevGameClicked"
                             Width="45"
                             Height="45"
                             FontSize="26"
@@ -97,6 +99,7 @@
                                 HorizontalAlignment="Center"/>
 
                         <TextBlock Text="Campaign Title"
+                                   x:Name="CreatedCampaignTitle"
                                    FontSize="18"
                                    HorizontalAlignment="Center"/>
                     </StackPanel>
@@ -104,6 +107,8 @@
                     <!-- Right Arrow -->
                     <Button Grid.Column="2"
                             Content="⟩"
+                            x:Name="NextGameBtn"
+                            Click="OnNextGameClicked"
                             Width="45"
                             Height="45"
                             FontSize="26"
