@@ -10,9 +10,5 @@ public partial class HeaderView : UserControl
     public HeaderView()
     {
         InitializeComponent();
-        if (!string.IsNullOrEmpty(UserSession.CurrentUsername))
-        {
-            UsernameDisplay.Text = UserSession.CurrentUsername;
-        }
     }
 }

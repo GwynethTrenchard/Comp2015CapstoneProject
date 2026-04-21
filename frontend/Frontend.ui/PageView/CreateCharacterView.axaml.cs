@@ -19,40 +19,40 @@ public partial class CreateCharacterView : UserControl
     {
         (TopLevel.GetTopLevel(this) as MainWindow)?.Navigate(new CampaignView());
     }
-    private async void OnSaveCharacterClicked(object? sender, RoutedEventArgs e)
-    {
-        var api = new ApiService();
-        int? campaignId = UserSession.ActiveCampaignId;
+    //private async void OnSaveCharacterClicked(object? sender, RoutedEventArgs e)
+    //{
+    //    var api = new ApiService();
+    //    int? campaignId = UserSession.ActiveCampaignId;
 
-        if (campaignId == null) return;
+    //    if (campaignId == null) return;
 
-        int.TryParse(LevelBox.Text, out int levelValue);
+    //    int.TryParse(LevelBox.Text, out int levelValue);
 
-        var statsData = new
-        {
-            strength = StrengthBox.Text,
-            dexterity = DexterityBox.Text,
-            constitution = ConstitutionBox.Text,
-            intelligence = IntelligenceBox.Text,
-            wisdom = WisdomBox.Text,
-            charisma = CharismaBox.Text
-        };
+    //    var statsData = new
+    //    {
+    //        strength = StrengthBox.Text,
+    //        dexterity = DexterityBox.Text,
+    //        constitution = ConstitutionBox.Text,
+    //        intelligence = IntelligenceBox.Text,
+    //        wisdom = WisdomBox.Text,
+    //        charisma = CharismaBox.Text
+    //    };
 
-        string statsJson = JsonSerializer.Serialize(statsData);
+    //    string statsJson = JsonSerializer.Serialize(statsData);
 
-        bool success = await api.CreateCharacter(
-            campaignId.Value,
-            CharacterNameInput.Text ?? "New Hero",
-            ClassInput.Text ?? "Fighter",
-            levelValue, 
-            statsJson   
-        );
+    //    bool success = await api.CreateCharacter(
+    //        campaignId.Value,
+    //        CharacterNameInput.Text ?? "New Hero",
+    //        ClassInput.Text ?? "Fighter",
+    //        levelValue, 
+    //        statsJson   
+    //    );
 
-        if (success)
-        {
-            (TopLevel.GetTopLevel(this) as MainWindow)?.Navigate(new CampaignView());
-        }
-    }
+    //    if (success)
+    //    {
+    //        (TopLevel.GetTopLevel(this) as MainWindow)?.Navigate(new CampaignView());
+    ////    }
+    //}
 
 
 
