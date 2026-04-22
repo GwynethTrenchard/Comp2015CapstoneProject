@@ -24,15 +24,15 @@ public partial class LoginPageView : UserControl
         string username = UsernameBox?.Text ?? "";
         string password = PasswordBox?.Text ?? "";
 
-        if (string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(password))
-        {
-            System.Diagnostics.Debug.WriteLine("Please enter a username and password.");
-            return;
-        }
+        //if (string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(password))
+        //{
+        //    System.Diagnostics.Debug.WriteLine("Please enter a username and password.");
+        //    return;
+        //}
 
         var api = new ApiService();
-
-        bool isSuccess = await api.LoginUser(username, password);
+        //removed , password from isSuccess for now
+        bool isSuccess = await api.LoginUser(username);
 
         if (isSuccess)
         {
