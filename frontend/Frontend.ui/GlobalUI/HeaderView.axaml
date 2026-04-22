@@ -10,14 +10,6 @@
                        Foreground="White"
                        FontSize="20"
                        HorizontalAlignment="Center"/>
-
-            <StackPanel Orientation="Horizontal" 
-                        HorizontalAlignment="Right" >
-                <TextBlock x:Name="UsernameDisplay"
-                           Text="Guest" 
-                           Foreground="White"
-                           FontSize="14"/>
-            </StackPanel>
         </Grid>
     </Border>
 
