@@ -53,7 +53,7 @@ namespace Frontend.ui.Services
     {
         private static readonly HttpClient _client = new HttpClient
         {
-            BaseAddress = new Uri("http://35.182.248.161:5000")
+            BaseAddress = new Uri("http://35.183.174.68:5000")
         };
 
 
@@ -151,15 +151,16 @@ namespace Frontend.ui.Services
             }
         }
 
-
-        public async Task<bool> LoginUser(string username, string password)
+        // removed && u.password_hash == password from the LoginUser logic for now
+        // also removed , string password from parameters
+        public async Task<bool> LoginUser(string username)
         {
             try
             {
                 var users = await _client.GetFromJsonAsync<List<UserResponse>>("/users");
 
                 
-                var foundUser = users?.FirstOrDefault(u => u.username == username && u.password_hash == password);
+                var foundUser = users?.FirstOrDefault(u => u.username == username);
 
                 if (foundUser != null)
                 { 
