@@ -63,7 +63,8 @@
 
                 
                 <Expander Header="Create a New Note"
-                          IsExpanded="False">
+                          IsExpanded="False"
+                          Width="250">
 
                     
 
