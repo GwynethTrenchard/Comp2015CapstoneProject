@@ -14,7 +14,7 @@
                  QUEST NAME (TOP CENTER)
                  =========================== -->
             <TextBox Grid.Column="1"
-                       Text="Quest Name"
+                       Watermark="Quest Name"
                        x:Name="QuestNameInput"
                        FontSize="28"
                        FontWeight="Bold"

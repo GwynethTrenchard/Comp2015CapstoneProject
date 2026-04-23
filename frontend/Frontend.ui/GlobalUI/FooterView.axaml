@@ -5,7 +5,8 @@
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="Frontend.ui.FooterView">
       <Border Background="#222" Padding="8">
-        <TextBlock Text="© 2025 My App"
+
+        <TextBlock Text="Version Alpha 0.1.49"
                    Foreground="White"
                    HorizontalAlignment="Center"
                    VerticalAlignment="Center"/>
